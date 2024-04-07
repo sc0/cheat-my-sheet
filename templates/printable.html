@@ -2,9 +2,14 @@
   <head>
     <style>
       @media print {
+        @page {
+          margin: 0;
+        }
+
         div.page {
           page-break-after: always;
           break-after: always;
+          margin: 1cm;
         }
       }
 
@@ -14,29 +19,29 @@
       }
 
       #preamble {
-        padding: 2rem;
-        margin-bottom: 2rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
         border-bottom: 1px solid black;
       }
 
       .title {
         margin: 0;
         text-align: center;
-        font-size: 24pt;
+        font-size: 20pt;
         font-weight: bold;
       }
 
       .description {
         margin: 0;
         text-align: center;
-        font-size: 12pt;
+        font-size: 10pt;
         font-style: italic;
       }
 
       .section-title {
         margin: 0;
         text-align: center;
-        font-size: 16pt;
+        font-size: 14pt;
         font-weight: bold;
       }
 
@@ -53,8 +58,8 @@
       }
 
       .line-item {
-        margin: 8px;
-        font-size: 12pt;
+        margin: 4px;
+        font-size: 10pt;
         display: flex;
         flex-direction: row;
         align-items: center;
