@@ -1,0 +1,563 @@
+<html>
+  <head>
+    <style>
+      @media print {
+        div.page {
+          page-break-after: always;
+          break-after: always;
+        }
+      }
+
+      .page {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+
+      #preamble {
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid black;
+      }
+
+      .title {
+        margin: 0;
+        text-align: center;
+        font-size: 24pt;
+        font-weight: bold;
+      }
+
+      .description {
+        margin: 0;
+        text-align: center;
+        font-size: 12pt;
+        font-style: italic;
+      }
+
+      .section-title {
+        margin: 0;
+        text-align: center;
+        font-size: 16pt;
+        font-weight: bold;
+      }
+
+      .section {
+        padding: 8px;
+        border-top: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .column > .section:first-child {
+        border-top: none;
+      }
+
+      .line-item {
+        margin: 8px;
+        font-size: 12pt;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .container {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .column {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 47.5%;
+      }
+
+      .divided {
+        margin: 0;
+        border-left: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="preamble">
+      <h1 class="title">Zellij Cheatsheet</h1>
+      <p class="description">This is a cheatsheet for my custom Zellij keybinds</p>
+    </div>
+
+    <div class="container">
+      <div id="column-1" class="column">
+        
+        <div class="section">
+          <h2 class="section-title">Pane mode</h2>
+          
+          <p class="line-item">
+            <span class="line-term">C-a</span>
+            <span class="line-desc">Init pane mode</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">Left</span>
+            <span class="line-desc">Move focus left</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">Right</span>
+            <span class="line-desc">Move focus right</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">Up</span>
+            <span class="line-desc">Move focus up</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">Down</span>
+            <span class="line-desc">Move focus down</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">t</span>
+            <span class="line-desc">Tab mode</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">s</span>
+            <span class="line-desc">Session mode</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">m</span>
+            <span class="line-desc">Move mode</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">r</span>
+            <span class="line-desc">Resize mode</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">C-q</span>
+            <span class="line-desc">Quit</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">h</span>
+            <span class="line-desc">Move focus left and back to normal</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">l</span>
+            <span class="line-desc">Move focus right and back to normal</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">j</span>
+            <span class="line-desc">Move focus down and back to normal</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">k</span>
+            <span class="line-desc">Move focus up and back to normal</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">p</span>
+            <span class="line-desc">Switch focus</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">n</span>
+            <span class="line-desc">New pane</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">A-l</span>
+            <span class="line-desc">New pane left</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">A-r</span>
+            <span class="line-desc">New pane right</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">A-d</span>
+            <span class="line-desc">New pane down</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">A-u</span>
+            <span class="line-desc">New pane up</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">x</span>
+            <span class="line-desc">Close pane</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">f</span>
+            <span class="line-desc">Toggle fullscreen</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">z</span>
+            <span class="line-desc">Toggle zoom</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">w</span>
+            <span class="line-desc">Toggle floating panes</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">e</span>
+            <span class="line-desc">Toggle embed or floating</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">c</span>
+            <span class="line-desc">Rename pane</span>
+          </p>
+          
+        </div>
+        
+        <div class="section">
+          <h2 class="section-title">Move mode</h2>
+          
+          <p class="line-item">
+            <span class="line-term">C-n</span>
+            <span class="line-desc">Switch back to normal</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">n or Tab</span>
+            <span class="line-desc">Move pane</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">p</span>
+            <span class="line-desc">Move pane backwards</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">h or Left</span>
+            <span class="line-desc">Move pane left</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">l or Right</span>
+            <span class="line-desc">Move pane right</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">j or Down</span>
+            <span class="line-desc">Move pane down</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">k or Up</span>
+            <span class="line-desc">Move pane up</span>
+          </p>
+          
+        </div>
+        
+        <div class="section">
+          <h2 class="section-title">Tab mode</h2>
+          
+          <p class="line-item">
+            <span class="line-term">C-w</span>
+            <span class="line-desc">Switch back to normal</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">r</span>
+            <span class="line-desc">Rename tab</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">h or Left or Up or k</span>
+            <span class="line-desc">Go to previous tab</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">l or Right or Down or j</span>
+            <span class="line-desc">Go to next tab</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">n</span>
+            <span class="line-desc">New tab</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">x</span>
+            <span class="line-desc">Close tab</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">s</span>
+            <span class="line-desc">Toggle sync</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">b</span>
+            <span class="line-desc">Break pane</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">]</span>
+            <span class="line-desc">Break pane right</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">[</span>
+            <span class="line-desc">Break pane left</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">1-9</span>
+            <span class="line-desc">Go to tab 1 to 9</span>
+          </p>
+          
+          <p class="line-item">
+            <span class="line-term">Tab</span>
+            <span class="line-desc">Toggle tab</span>
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const data = {
+      pages: [],
+    };
+
+    function getElmHeight(node) {
+      const list = [
+        "margin-top",
+        "margin-bottom",
+        "border-top",
+        "border-bottom",
+        "padding-top",
+        "padding-bottom",
+        "height",
+      ];
+
+      const style = window.getComputedStyle(node);
+      const result = list
+        .map((k) => parseInt(style.getPropertyValue(k), 10))
+        .reduce((prev, cur) => prev + cur);
+
+      return !Number.isNaN(result) ? result : 0;
+    }
+
+    function getHeightInCm(element) {
+      const ratio = window.devicePixelRatio;
+      const heightInPx = getElmHeight(element);
+      const heightInCm = (heightInPx * 2.54) / (96 * ratio);
+
+      return heightInCm;
+    }
+
+    function splitSection(section, heightLimit) {
+      const ss = document.createElement("div");
+      ss.classList.add("section");
+
+      let splitSectionHeight = getHeightInCm(ss);
+
+      const sectionChildren = Array.from(section.children);
+      const addedChildren = [];
+
+      sectionChildren.forEach((child) => {
+        const childHeight = getHeightInCm(child);
+
+        if (splitSectionHeight + childHeight <= heightLimit) {
+          splitSectionHeight += childHeight;
+          ss.appendChild(child.cloneNode(true));
+          addedChildren.push(child);
+        } else {
+          return;
+        }
+      });
+
+      if (addedChildren.length === 1) {
+        if (addedChildren[0].classList.contains("section-title")) {
+          return null;
+        }
+      }
+
+      addedChildren.forEach((child) => {
+        child.remove();
+      });
+
+      if (section.children.length === 0) {
+        section.remove();
+      }
+      return ss;
+    }
+
+    window.onload = function () {
+      let currentPageIdx = 1;
+      const pageLimit = 26.5;
+
+      if (getHeightInCm(document.body) <= pageLimit) {
+        return;
+      }
+
+      while (true) {
+        const page = document.getElementsByTagName("body")[0];
+        const heightInCm = getHeightInCm(page);
+        console.log(`Height in centimeters: ${heightInCm.toFixed(2)}cm`);
+
+        const pageData = {
+          preamble: null,
+          leftColumn: [],
+          leftColumnFilled: false,
+          leftColumnHeight: 0,
+          rightColumn: [],
+          rightColumnFilled: false,
+          rightColumnHeight: 0,
+        };
+
+        let heightLimit = pageLimit;
+
+        const preamble = document.querySelector(`body>#preamble`);
+
+        if (preamble) {
+          heightLimit = heightLimit - getHeightInCm(preamble);
+          pageData.preamble = preamble.cloneNode(true);
+          console.log("removing preamble");
+          preamble.remove();
+        }
+
+        const sections = document.querySelectorAll(
+          `body>.container>#column-1>.section`,
+        );
+        const sectionsArr = Array.from(sections);
+        if (sectionsArr.length === 0) {
+          break;
+        }
+
+        let iters = 0;
+        while (
+          document.querySelectorAll(`body>.container>#column-1>.section`).length
+        ) {
+          if (++iters > 10) {
+            console.log("error");
+            return;
+          }
+          const section = document.querySelectorAll(
+            `body>.container>#column-1>.section`,
+          )[0];
+
+          console.log("Handling section", section);
+          if (pageData.leftColumnFilled && pageData.rightColumnFilled) {
+            break;
+          }
+
+          const h = getHeightInCm(section);
+          console.log("Full section height", h);
+
+          if (!pageData.leftColumnFilled) {
+            if (h + pageData.leftColumnHeight <= heightLimit) {
+              pageData.leftColumn.push(section.cloneNode(true));
+              pageData.leftColumnHeight = pageData.leftColumnHeight + h;
+              section.remove();
+              continue;
+            } else {
+              const spl = splitSection(
+                section,
+                heightLimit - pageData.leftColumnHeight,
+              );
+              if (!spl) {
+                pageData.leftColumnFilled = true;
+                continue;
+              }
+              pageData.leftColumn.push(spl);
+              pageData.leftColumnHeight += getElmHeight(spl);
+              pageData.leftColumnFilled = true;
+              continue;
+            }
+          }
+
+          if (!pageData.rightColumnFilled) {
+            console.log("appending to right");
+            if (h + pageData.rightColumnHeight <= heightLimit) {
+              pageData.rightColumn.push(section.cloneNode(true));
+              pageData.rightColumnHeight = pageData.rightColumnHeight + h;
+              section.remove();
+              continue;
+            } else {
+              const spl = splitSection(
+                section,
+                heightLimit - pageData.rightColumnHeight,
+              );
+              if (!spl) {
+                pageData.rightColumnFilled = true;
+                continue;
+              }
+              pageData.rightColumn.push(spl);
+              pageData.rightColumnHeight += getElmHeight(spl);
+              pageData.rightColumnFilled = true;
+              continue;
+            }
+          }
+        }
+
+        data.pages.push(pageData);
+        console.log(data);
+        currentPageIdx += 1;
+        if (currentPageIdx > 10) {
+          console.log("error");
+          break;
+        }
+      }
+
+      let idx = 1;
+      data.pages.forEach((page) => {
+        const pageEl = document.createElement("div");
+        pageEl.id = `page-${idx}`;
+        pageEl.classList.add("page");
+
+        if (page.preamble) {
+          pageEl.appendChild(page.preamble);
+        }
+
+        const pageContainer = document.createElement("div");
+        pageContainer.classList.add("container");
+
+        const columnLeft = document.createElement("div");
+        columnLeft.classList.add("column");
+
+        page.leftColumn.forEach((section) => {
+          columnLeft.appendChild(section);
+        });
+
+        const columnRight = document.createElement("div");
+        columnRight.classList.add("column");
+
+        page.rightColumn.forEach((section) => {
+          columnRight.appendChild(section);
+        });
+
+        pageContainer.appendChild(columnLeft);
+        pageContainer.appendChild(columnRight);
+
+        pageEl.appendChild(pageContainer);
+        pageEl.appendChild(document.createElement("br"));
+        document.getElementsByTagName("body")[0].appendChild(pageEl);
+
+        idx += 1;
+      });
+    };
+  </script>
+</html>

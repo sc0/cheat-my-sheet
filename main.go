@@ -1,12 +1,12 @@
 package main
 
 import (
+	"flag"
 	"log"
-	"net/http"
 	"os"
+	"strings"
 	"text/template"
 
-	"github.com/gorilla/mux"
 	"gopkg.in/yaml.v3"
 )
 
@@ -41,23 +41,52 @@ func ParsePageData(path string) PageData {
 }
 
 func main() {
-	templ := template.Must(template.ParseFiles("templates/default.html"))
+	var inputFile string
+	var outputFile string
+	var templateName string
 
-	router := mux.NewRouter()
+	flag.StringVar(&inputFile, "i", "", "Input file")
+	flag.StringVar(&inputFile, "input", "", "Input file")
 
-	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		data := ParsePageData("data/test.yaml")
+	flag.StringVar(&outputFile, "o", "", "Output file")
+	flag.StringVar(&outputFile, "output", "", "Output file")
 
-		err := templ.Execute(w, data)
-		if err != nil {
-			log.Fatalf("Failed executing the template: %v", err)
-		}
-	})
+	flag.StringVar(&templateName, "t", "", "Template name")
+	flag.StringVar(&templateName, "template", "printable", "Template name")
 
-	srv := &http.Server{
-		Addr:    ":8080",
-		Handler: router,
+	flag.Parse()
+
+	if inputFile == "" {
+		log.Fatal("Input file is required")
 	}
 
-	srv.ListenAndServe()
+	if !(strings.HasSuffix(inputFile, ".yaml") || strings.HasSuffix(inputFile, ".yml")) {
+		log.Fatal("Input file must be a YAML file")
+	}
+
+	if outputFile == "" {
+		log.Fatal("Output file is required")
+	}
+
+	generateCheatsheet(inputFile, outputFile, templateName)
+}
+
+func generateCheatsheet(inputFile string, outputFile string, templateName string) {
+	templ := template.Must(template.ParseFiles("templates/" + templateName + ".html"))
+
+	if !strings.HasSuffix(outputFile, ".html") {
+		outputFile += ".html"
+	}
+
+	file, err := os.Create(outputFile)
+	if err != nil {
+		log.Fatalf("Failed creating output file: %v", err)
+	}
+
+	defer file.Close()
+
+	err = templ.Execute(file, ParsePageData(inputFile))
+	if err != nil {
+		log.Fatalf("Failed executing the template: %v", err)
+	}
 }
