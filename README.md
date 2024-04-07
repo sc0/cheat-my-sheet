@@ -77,9 +77,9 @@ happy with how it turned out so decided to share.
 
 ## Examples 
 
-Here's how the generated HTML file renders in browser:
-[HTML in browser](img/browser.png)
-
-And here's the print preview: 
-[Print preview](img/print-1.png)
-[Print preview](img/print-2.png)
+Here's how the generated HTML file renders in browser: <br/>
+<img src="img/browser.png" width="640px">
+<br/>
+And here's the print preview: <br/>
+<img src="img/print-1.png" width="640px">
+<img src="img/print-2.png" width="640px">
