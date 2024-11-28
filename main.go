@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"html"
 	"log"
 	"os"
 	"strings"
@@ -37,7 +38,20 @@ func ParsePageData(path string) PageData {
 	if err != nil {
 		log.Fatalf("Failed parsing %s: %v", path, err)
 	}
-	return pageData
+	return encodePageData(pageData)
+}
+
+func encodePageData(data PageData) PageData {
+	data.Title = html.EscapeString(data.Title)
+	data.Description = html.EscapeString(data.Description)
+	for i := 0; i < len(data.Sections); i++ {
+		data.Sections[i].Title = html.EscapeString((data.Sections[i].Title))
+		for j := 0; j < len(data.Sections[i].Items); j++ {
+			data.Sections[i].Items[j].Term = html.EscapeString(data.Sections[i].Items[j].Term)
+			data.Sections[i].Items[j].Description = html.EscapeString(data.Sections[i].Items[j].Description)
+		}
+	}
+	return data
 }
 
 func main() {
