@@ -90,19 +90,19 @@
 
   <body>
     <div id="preamble">
-      <h1 class="title">{{ .Title }}</h1>
-      <p class="description">{{ .Description }}</p>
+      <h1 class="title">{{ .Title | html }}</h1>
+      <p class="description">{{ .Description | html }}</p>
     </div>
 
     <div class="container">
       <div id="column-1" class="column">
         {{ range $section := .Sections }}
         <div class="section">
-          <h2 class="section-title">{{ $section.Title }}</h2>
+          <h2 class="section-title">{{ $section.Title | html }}</h2>
           {{ range $item := $section.Items }}
           <p class="line-item">
-            <span class="line-term">{{ $item.Term }}</span>
-            <span class="line-desc">{{ $item.Description}}</span>
+            <span class="line-term">{{ $item.Term | html }}</span>
+            <span class="line-desc">{{ $item.Description | html }}</span>
           </p>
           {{ end }}
         </div>
